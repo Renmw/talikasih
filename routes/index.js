@@ -1,6 +1,6 @@
 const { Router } = require ('express')
 const router = Router()
-const DonationRoutes = require('./UserDonations')
+const DonationRoutes = require('./userDonations')
 
 router.use('/donate',DonationRoutes);
 

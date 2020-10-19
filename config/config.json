@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "postgres",
-    "password": "shichibukai",
+    "password": "admin",
     "database": "productclass",
     "host": "127.0.0.1",
     "dialect": "postgres"
@@ -14,10 +14,10 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "pxumqotbjzlffh",
-    "password": "b4c5101ba5f38d4acbf8a9332c307a21836e7aacb87b65dd5769c5df2e07e7f3",
-    "database": "dd0mhkko2jjlfo",
-    "host": "ec2-107-22-241-205.compute-1.amazonaws.com",
+    "username": "uikdsjlgafvffu",
+    "password": "2e830ab443391928022a98e7b0d8d632c899f56999bdcda540a402c2d47e8491",
+    "database": "d46o55i2rardsv",
+    "host": "ec2-54-91-178-234.compute-1.amazonaws.com",
     "dialect": "postgres"
   }
 }
