@@ -1,0 +1,41 @@
+{
+  "name": "team-backend",
+  "version": "1.0.0",
+  "description": "Initial Development Branch Push",
+  "main": "dot.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/glintsxbinar_batch7-productclass/team-b-tali-kasih/team-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/glintsxbinar_batch7-productclass/team-b-tali-kasih/team-backend/issues"
+  },
+  "homepage": "https://gitlab.com/glintsxbinar_batch7-productclass/team-b-tali-kasih/team-backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cloudinary": "^1.23.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jest": "^26.5.3",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemon": "^2.0.5",
+    "paginate": "^0.2.0",
+    "pg": "^8.4.1",
+    "postgres": "^1.0.2",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0",
+    "sequelize-paginate": "^1.1.6"
+  },
+  "devDependencies": {}
+}
