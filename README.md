@@ -471,7 +471,11 @@ message : "token not valid"
 
 ## Get All Campaign by Category
 ---
+<<<<<<< HEAD
 ### Method GET (https://warm-tundra-23736.herokuapp.com/discover/category/:CategoryId/:page)
+=======
+### Method GET (https://warm-tundra-23736.herokuapp.com/discover/category/:page)
+>>>>>>> 7117a4d44c9997bbc404bf40b7081409366414af
 ### Request Header
 > none
 ### Request Params
@@ -509,7 +513,11 @@ message : "token not valid"
 
 ## Get All Campaign by Search
 ---
+<<<<<<< HEAD
 ### Method GET (https://warm-tundra-23736.herokuapp.com/discover/search/:search/:page)
+=======
+### Method GET (https://warm-tundra-23736.herokuapp.com/discover/search/:page)
+>>>>>>> 7117a4d44c9997bbc404bf40b7081409366414af
 ### Request Header
 > none
 ### Request Params
