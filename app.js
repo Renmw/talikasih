@@ -5,7 +5,7 @@ const {router} = require('./routes/index')
 const errorHandler = require('./middlewares/errorHandler')
 
 // console.log(process.env.PORT)
-const port = process.env.PORT || 3000;
+const port = Number(process.env.PORT) || 3000;
 
 app.use(cors());
 app.use(express.json());
