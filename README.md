@@ -407,7 +407,7 @@ message : "token not valid"
 
 ## Get Campaign by Id
 ---
-### Method POST (https://warm-tundra-23736.herokuapp.com/campaign/:id)
+### Method GET (https://warm-tundra-23736.herokuapp.com/campaign/:id)
 ### Request Header
 > "token": "<your_token>"
 ### Request Params
