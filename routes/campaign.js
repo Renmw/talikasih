@@ -6,11 +6,6 @@ const {uploader} = require('../middlewares/multer');
 
 //CRUD
 router.post('/add', auth.authentication, uploader.single('header_img'), campaignController.addCampaign);
-<<<<<<< HEAD
-=======
-//router.post('/add', auth.authentication, campaignUpload.single('header_img'), campaignController.addCampaign);
-router.get('/:id',campaignController.getCampaign);
->>>>>>> 7117a4d44c9997bbc404bf40b7081409366414af
 router.get('/edit/:id', auth.authentication, campaignController.editFormCampaign);
 router.put('/edit/:id', auth.authentication, auth.authoCampaign, campaignController.editCampaign);
 router.put('/edit/image/:id', auth.authentication, auth.authoCampaign, uploader.single('header_img'), campaignController.editCampaignImage);

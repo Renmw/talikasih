@@ -39,28 +39,7 @@ class campaignController {
         }
     }
 
-<<<<<<< HEAD
     //CRUD
-=======
-    static async getCampaign(req,res,next){
-        const id = req.params.id;
-        try{
-            const found = await Campaigns.findOne({
-				where: {id},
-				include: [Users,Category],
-			});
-            if(found){
-                res.status(200).json({found})
-            }else{
-                next({message: "campaign not found!"})
-            }
-        }catch(err){
-            next(err)
-        }
-    }
-
-    
->>>>>>> 7117a4d44c9997bbc404bf40b7081409366414af
     static async addCampaign(req,res,next){
         const raised = 0;
         const { title, goal, story, due_date, CategoryId, bankAccount } = req.body;
