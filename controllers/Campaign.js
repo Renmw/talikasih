@@ -1,4 +1,5 @@
-const { Campaigns, Category ,UserComments ,Users } = require('../models');
+const { Campaigns, Category ,UserComments } = require('../models');
+const {Users} = require('../models');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
@@ -37,6 +38,25 @@ class campaignController {
             next(err)
         }
     }
+
+    static async getCampaign(req,res,next){
+        const id = req.params.id;
+        try{
+            const found = await Campaigns.findOne({
+				where: {id},
+				include: [Users,Category],
+			});
+            if(found){
+                res.status(200).json({found})
+            }else{
+                next({message: "campaign not found!"})
+            }
+        }catch(err){
+            next(err)
+        }
+    }
+
+    
     static async addCampaign(req,res,next){
         const raised = 0;
         const { title, goal, story, due_date, CategoryId, bankAccount } = req.body;

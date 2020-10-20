@@ -6,6 +6,7 @@ const {uploader} = require('../middlewares/multer');
 
 router.post('/add', auth.authentication, uploader.single('header_img'), campaignController.addCampaign);
 //router.post('/add', auth.authentication, campaignUpload.single('header_img'), campaignController.addCampaign);
+router.get('/:id',campaignController.getCampaign);
 router.get('/edit/:id', auth.authentication, campaignController.editFormCampaign);
 router.put('/edit/:id', auth.authentication, auth.authoCampaign, campaignController.editCampaign);
 router.put('/edit/image/:id', auth.authentication, auth.authoCampaign, uploader.single('header_img'), campaignController.editCampaignImage);

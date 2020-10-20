@@ -10,7 +10,7 @@ Initial Development Branch
 
 ---
 
-### Method POST (https://infinite-reef-41011.herokuapp.com/)
+### Method POST (https://warm-tundra-23736.herokuapp.com/)
 
 ### Request Header
 
@@ -36,7 +36,7 @@ Initial Development Branch
 
 ---
 
-### Method POST (https://infinite-reef-41011.herokuapp.com/login)
+### Method POST (https://warm-tundra-23736.herokuapp.com/login)
 
 ### Request Header
 
@@ -62,7 +62,7 @@ Initial Development Branch
 
 ---
 
-### Method GET (https://infinite-reef-41011.herokuapp.com/allusers)
+### Method GET (https://warm-tundra-23736.herokuapp.com/allusers)
 
 ### Request Header
 
@@ -88,7 +88,7 @@ Initial Development Branch
 
 ---
 
-### Method DELETE (https://infinite-reef-41011.herokuapp.com/)
+### Method DELETE (https://warm-tundra-23736.herokuapp.com/)
 
 ### Request Header
 
@@ -114,7 +114,7 @@ Initial Development Branch
 
 ---
 
-### Method PUT (https://infinite-reef-41011.herokuapp.com)
+### Method PUT (https://warm-tundra-23736.herokuapp.com/
 
 ### Request Header
 
@@ -140,7 +140,7 @@ Initial Development Branch
 
 ---
 
-### Method PUT (https://infinite-reef-41011.herokuapp.com/image)
+### Method PUT (https://warm-tundra-23736.herokuapp.com/image)
 
 ### Request Header
 
@@ -164,7 +164,7 @@ Initial Development Branch
 
 ## User Add Donation to a Campaign
 
-### POST (https://infinite-reef-41011.herokuapp.com/donate/campaign/:id)
+### POST (https://warm-tundra-23736.herokuapp.com/donate/campaign/:id)
 
 parameters : Campaign id
 headers : needed access token
@@ -234,7 +234,7 @@ message: "Campaign not Found"
 
 ## Get all donated User's logs
 
-### GET (https://infinite-reef-41011.herokuapp.com/donate/campaign)
+### GET (https://warm-tundra-23736.herokuapp.com/donate/campaign)
 
 Headers
 need access_token
@@ -291,7 +291,7 @@ message : "token not valid"
 
 ## Get All Category
 ---
-### Method GET (https://infinite-reef-41011.herokuapp.com/category)
+### Method GET (https://warm-tundra-23736.herokuapp.com/category)
 ### Request Header
 > none
 ### Request Body
@@ -305,7 +305,7 @@ message : "token not valid"
 
 ## Add Category
 ---
-### Method POST (https://infinite-reef-41011.herokuapp.com/category/add)
+### Method POST (https://warm-tundra-23736.herokuapp.com/category/add)
 ### Request Header
 > "token": "<your_token>"
 ### Request Body
@@ -321,7 +321,7 @@ message : "token not valid"
 
 ## Edit Category
 ---
-### Method PUT (https://infinite-reef-41011.herokuapp.com/category/edit/:id)
+### Method PUT (https://warm-tundra-23736.herokuapp.com/category/edit/:id)
 ### Request Header
 > "token": "<your_token>"
 ### Request Params
@@ -337,7 +337,7 @@ message : "token not valid"
 
 ## Delete Category
 ---
-### Method DELETE (https://infinite-reef-41011.herokuapp.com/category/delete/:id)
+### Method DELETE (https://warm-tundra-23736.herokuapp.com/category/delete/:id)
 ### Request Header
 > "token": "<your_token>"
 ### Request Params
@@ -353,7 +353,7 @@ message : "token not valid"
 
 ## Get All Campaign
 ---
-### Method GET (https://infinite-reef-41011.herokuapp.com/discover/:page)
+### Method GET (https://warm-tundra-23736.herokuapp.com/discover/:page)
 ### Request Header
 > none
 ### Request Body
@@ -391,7 +391,7 @@ message : "token not valid"
 
 ## Add Campaign
 ---
-### Method POST (https://infinite-reef-41011.herokuapp.com/campaign/add)
+### Method POST (https://warm-tundra-23736.herokuapp.com/campaign/add)
 ### Request Header
 > "token": "<your_token>"
 ### Request Body
@@ -405,9 +405,27 @@ message : "token not valid"
 ---
 <br>
 
+## Get Campaign by Id
+---
+### Method POST (https://warm-tundra-23736.herokuapp.com/campaign/:id)
+### Request Header
+> "token": "<your_token>"
+### Request Params
+> "id" : "<asset_id>"
+### Request Body
+> none
+### Response (200)
+>"point": "<asset_point>"<br>"id": "<asset_id>",<br>"title": "<asset_title>"<br> "goal": "<asset_goal>"<br>"story": "<asset_story>"<br> "due_date": "<asset_due_date>"<br>"header_image": "<asset_header_image>"<br> "CategoryId": "<asset_CategoryId>"<br>"raised": "<asset_raised>"<br>"UserId": "<asset_UserId>",<br>"bankAccount": "<asset_bankAccount>",<br> **Users Details** <br> **Categories Details**
+### Response (409 - Conflict)
+>"msg": "<error_msg>"
+### Response (400 - Bad Request)
+>"msg": "<error_msg>"
+---
+<br>
+
 ## Edit Campaign
 ---
-### Method PUT (https://infinite-reef-41011.herokuapp.com/campaign/edit/:id)
+### Method PUT (https://warm-tundra-23736.herokuapp.com/campaign/edit/:id)
 ### Request Header
 > "token": "<your_token>"
 ### Request Params
@@ -423,7 +441,7 @@ message : "token not valid"
 
 ## Edit Image Campaign
 ---
-### Method PUT (https://infinite-reef-41011.herokuapp.com/campaign/edit/image/:id)
+### Method PUT (https://warm-tundra-23736.herokuapp.com/campaign/edit/image/:id)
 ### Request Header
 > "token": "<your_token>"
 ### Request Params
@@ -439,7 +457,7 @@ message : "token not valid"
 
 ## Delete Campaign
 ---
-### Method DELETE (https://infinite-reef-41011.herokuapp.com/campaign/delete/:id)
+### Method DELETE (https://warm-tundra-23736.herokuapp.com/campaign/delete/:id)
 ### Request Header
 > "token": "<your_token>"
 ### Request Params
@@ -453,7 +471,7 @@ message : "token not valid"
 
 ## Get All Campaign by Category
 ---
-### Method GET (https://infinite-reef-41011.herokuapp.com/discover/category/:page)
+### Method GET (https://warm-tundra-23736.herokuapp.com/discover/category/:page)
 ### Request Header
 > none
 ### Request Params
@@ -491,7 +509,7 @@ message : "token not valid"
 
 ## Get All Campaign by Search
 ---
-### Method GET (https://infinite-reef-41011.herokuapp.com/discover/search/:page)
+### Method GET (https://warm-tundra-23736.herokuapp.com/discover/search/:page)
 ### Request Header
 > none
 ### Request Params
@@ -529,7 +547,7 @@ message : "token not valid"
 
 ## Get All Campaign by Raised
 ---
-### Method GET (https://infinite-reef-41011.herokuapp.com/campaign/raised)
+### Method GET (https://warm-tundra-23736.herokuapp.com/campaign/raised)
 ### Request Header
 > none
 ### Request Params
@@ -563,7 +581,7 @@ message : "token not valid"
 
 ## Get All Campaign by Popularity
 ---
-### Method GET (https://infinite-reef-41011.herokuapp.com/campaign/popular/:page)
+### Method GET (https://warm-tundra-23736.herokuapp.com/campaign/popular/:page)
 ### Request Header
 > none
 ### Request Params

@@ -15,6 +15,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Campaigns.belongsTo(models.Category);
+      Campaigns.belongsTo(models.Users);
+
       Campaigns.belongsToMany(models.Users, {through: 'models.UserDonations'})
       Campaigns.belongsToMany(models.Users, {through: 'models.UserComments'})
     }
