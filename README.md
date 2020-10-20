@@ -471,13 +471,13 @@ message : "token not valid"
 
 ## Get All Campaign by Category
 ---
-### Method GET (https://warm-tundra-23736.herokuapp.com/discover/category/:page)
+### Method GET (https://warm-tundra-23736.herokuapp.com/discover/category/:CategoryId/:page)
 ### Request Header
 > none
 ### Request Params
+>"CategoryId": "<category_id>";<br>
 >"page": "<on_page>";
-### Request Body
-> "CategoryId": "<category_id>";
+
 ### Response (200)
 >**Campaign Table** <br>"on_page": "<on_page>",<br>
     "total_data": "<total_data>",<br>
@@ -509,13 +509,14 @@ message : "token not valid"
 
 ## Get All Campaign by Search
 ---
-### Method GET (https://warm-tundra-23736.herokuapp.com/discover/search/:page)
+### Method GET (https://warm-tundra-23736.herokuapp.com/discover/search/:search/:page)
 ### Request Header
 > none
 ### Request Params
+> "search": "<search_keyword>";<br>
 >"page": "<on_page>";
 ### Request Body
-> "search": "<search_keyword>";
+
 ### Response (200)
 >**Campaign Table** <br>"on_page": "<on_page>",<br>
     "total_data": "<total_data>",<br>
@@ -572,6 +573,9 @@ message : "token not valid"
             "point": "<asset_point>",<br>
             "createdAt": "<asset_createdAt>",<br>
             "updatedAt": "<asset_updatedAt>",<br>
+            "Category": {<br>
+                "name": "<asset_name>",<br>
+                "image": "<asset_image>"<br>
             }<br>
         }
 ### Response (400 - Bad Request)
@@ -609,6 +613,9 @@ message : "token not valid"
             "point": "<asset_point>",<br>
             "createdAt": "<asset_createdAt>",<br>
             "updatedAt": "<asset_updatedAt>",<br>
+            "Category": {<br>
+                "name": "<asset_name>",<br>
+                "image": "<asset_image>"<br>
             }<br>
         }
 ### Response (400 - Bad Request)
@@ -616,7 +623,245 @@ message : "token not valid"
 ---
 <br>
 
+## Get All Campaign by Urgent
+---
+### Method GET (https://warm-tundra-23736.herokuapp.com/campaign/urgent/:page)
+### Request Header
+> none
+### Request Params
+>"page": "<on_page>";
+### Request Body
+> none
+### Response (200)
+>**Campaign Table** <br>
+    "on_page": "<on_page>",<br>
+    "total_data": "<total_data>",<br>
+    "total_pages": "<total_page>",<br>
+    "ranked": [<br>
+        {<br>
+            "id": "<asset_id>",<br>
+            "title": "<asset_title>",<br>
+            "goal": "<asset_goal>",<br>
+            "raised": "<asset_raised>",<br>
+            "header_img": "<asset_header_img>",<br>
+            "story": "<asset_story>",<br>
+            "due_date": "<asset_due_date>",<br>
+            "UserId": "<asset_UserId>",<br>
+            "CategoryId": "<asset_CategoryId>",<br>
+            "bankAccount": "<asset_bankAccount>",<br>
+            "point": "<asset_point>",<br>
+            "createdAt": "<asset_createdAt>",<br>
+            "updatedAt": "<asset_updatedAt>",<br>
+            "Category": {<br>
+                "name": "<asset_name>",<br>
+                "image": "<asset_image>"<br>
+            }<br>
+        }
+### Response (400 - Bad Request)
+>"msg": "<error_msg>"
+---
+<br>
 
+## Get All Campaign by Search Sort Popular
+---
+### Method GET (https://warm-tundra-23736.herokuapp.com/campaign/search/popular/:search/:page)
+### Request Header
+> none
+### Request Params
+> "search": "<search_keyword>";<br>
+>"page": "<on_page>";
+### Request Body
+> none
+### Response (200)
+>**Campaign Table** <br>
+    "on_page": "<on_page>",<br>
+    "total_data": "<total_data>",<br>
+    "total_pages": "<total_page>",<br>
+    "ranked": [<br>
+        {<br>
+            "id": "<asset_id>",<br>
+            "title": "<asset_title>",<br>
+            "goal": "<asset_goal>",<br>
+            "raised": "<asset_raised>",<br>
+            "header_img": "<asset_header_img>",<br>
+            "story": "<asset_story>",<br>
+            "due_date": "<asset_due_date>",<br>
+            "UserId": "<asset_UserId>",<br>
+            "CategoryId": "<asset_CategoryId>",<br>
+            "bankAccount": "<asset_bankAccount>",<br>
+            "point": "<asset_point>",<br>
+            "createdAt": "<asset_createdAt>",<br>
+            "updatedAt": "<asset_updatedAt>",<br>
+            "Category": {<br>
+                "name": "<asset_name>",<br>
+                "image": "<asset_image>"<br>
+            }<br>
+        }
+### Response (400 - Bad Request)
+>"msg": "<error_msg>"
+---
+<br>
+
+## Get All Campaign by Search Sort Less Donation
+---
+### Method GET (https://warm-tundra-23736.herokuapp.com/campaign/search/lessdonate/:search/:page)
+### Request Header
+> none
+### Request Params
+> "search": "<search_keyword>";<br>
+>"page": "<on_page>";
+### Request Body
+> none
+### Response (200)
+>**Campaign Table** <br>
+    "on_page": "<on_page>",<br>
+    "total_data": "<total_data>",<br>
+    "total_pages": "<total_page>",<br>
+    "ranked": [<br>
+        {<br>
+            "id": "<asset_id>",<br>
+            "title": "<asset_title>",<br>
+            "goal": "<asset_goal>",<br>
+            "raised": "<asset_raised>",<br>
+            "header_img": "<asset_header_img>",<br>
+            "story": "<asset_story>",<br>
+            "due_date": "<asset_due_date>",<br>
+            "UserId": "<asset_UserId>",<br>
+            "CategoryId": "<asset_CategoryId>",<br>
+            "bankAccount": "<asset_bankAccount>",<br>
+            "point": "<asset_point>",<br>
+            "createdAt": "<asset_createdAt>",<br>
+            "updatedAt": "<asset_updatedAt>",<br>
+            "Category": {<br>
+                "name": "<asset_name>",<br>
+                "image": "<asset_image>"<br>
+            }<br>
+        }
+### Response (400 - Bad Request)
+>"msg": "<error_msg>"
+---
+<br>
+
+## Get All Campaign by Search Sort Urgent
+---
+### Method GET (https://warm-tundra-23736.herokuapp.com/campaign/search/urgent/:search/:page)
+### Request Header
+> none
+### Request Params
+> "search": "<search_keyword>";<br>
+>"page": "<on_page>";
+### Request Body
+> none
+### Response (200)
+>**Campaign Table** <br>
+    "on_page": "<on_page>",<br>
+    "total_data": "<total_data>",<br>
+    "total_pages": "<total_page>",<br>
+    "ranked": [<br>
+        {<br>
+            "id": "<asset_id>",<br>
+            "title": "<asset_title>",<br>
+            "goal": "<asset_goal>",<br>
+            "raised": "<asset_raised>",<br>
+            "header_img": "<asset_header_img>",<br>
+            "story": "<asset_story>",<br>
+            "due_date": "<asset_due_date>",<br>
+            "UserId": "<asset_UserId>",<br>
+            "CategoryId": "<asset_CategoryId>",<br>
+            "bankAccount": "<asset_bankAccount>",<br>
+            "point": "<asset_point>",<br>
+            "createdAt": "<asset_createdAt>",<br>
+            "updatedAt": "<asset_updatedAt>",<br>
+            "Category": {<br>
+                "name": "<asset_name>",<br>
+                "image": "<asset_image>"<br>
+            }<br>
+        }
+### Response (400 - Bad Request)
+>"msg": "<error_msg>"
+---
+<br>
+
+## GET /campaign/categoryPopular/:CategoryId/:page
+```
+Get campaign by categoryId sort by most popular (12 campaign/page)
+-Request Header:
+not needed
+-Request Body:
+not needed
+-Response(200 - OK){
+    "id": "",
+    "title": "",
+    "goal": "",
+    "raised": "",
+    "header_img": "",
+    "story": "",
+    "due_date": "",
+    "UserId": "",
+    "CategoryId": "",
+    "bankAccount": "",
+    "point": "",
+    "createdAt": "",
+    "updatedAt": "",
+        "Category": {
+            "name": "",
+            "image": ""
+}
+```
+
+## GET /campaign/categoryUrgent/:CategoryId/:page
+```
+Get campaign by categoryId sort by most urgent (12 campaign/page)
+-Request Header:
+not needed
+-Request Body:
+not needed
+-Response(200 - OK){
+    "id": "",
+    "title": "",
+    "goal": "",
+    "raised": "",
+    "header_img": "",
+    "story": "",
+    "due_date": "",
+    "UserId": "",
+    "CategoryId": "",
+    "bankAccount": "",
+    "point": "",
+    "createdAt": "",
+    "updatedAt": "",
+        "Category": {
+            "name": "",
+            "image": ""
+}
+```
+
+## GET /campaign/categoryLess/:CategoryId/:page
+```
+Get campaign by categoryId sort by less donation (12 campaign/page)
+-Request Header:
+not needed
+-Request Body:
+not needed
+-Response(200 - OK){
+    "id": "",
+    "title": "",
+    "goal": "",
+    "raised": "",
+    "header_img": "",
+    "story": "",
+    "due_date": "",
+    "UserId": "",
+    "CategoryId": "",
+    "bankAccount": "",
+    "point": "",
+    "createdAt": "",
+    "updatedAt": "",
+        "Category": {
+            "name": "",
+            "image": ""
+}
+```
 
 # Campaign Log API
 ## GET /campaignLog/:CampaignId/:page
@@ -767,3 +1012,110 @@ delete existed comment using CommentId
 not needed
 -Response (200 - "Comment deleted")
 ```
+## Get All Campaign by Campaign Id
+---
+### Method GET (https://warm-tundra-23736.herokuapp.com/campaign/:id)
+### Request Header
+> none
+### Request Params
+>"id": "<Campaign_Id>";
+### Request Body
+> none
+### Response (200)
+>**Campaign Table** <br>
+            "id": "<asset_id>",<br>
+            "title": "<asset_title>",<br>
+            "goal": "<asset_goal>",<br>
+            "raised": "<asset_raised>",<br>
+            "header_img": "<asset_header_img>",<br>
+            "story": "<asset_story>",<br>
+            "due_date": "<asset_due_date>",<br>
+            "UserId": "<asset_UserId>",<br>
+            "CategoryId": "<asset_CategoryId>",<br>
+            "bankAccount": "<asset_bankAccount>",<br>
+            "point": "<asset_point>",<br>
+            "createdAt": "<asset_createdAt>",<br>
+            "updatedAt": "<asset_updatedAt>",<br>
+            "User": <br>
+                "name": "<asset_name>",<br>
+                "photo": "<asset_photo>",<br>
+            "Category": {<br>
+                "name": "<asset_name>",<br>
+                "image": "<asset_image>"<br>
+            }<br>
+        }
+### Response (400 - Bad Request)
+>"msg": "<error_msg>"
+---
+<br>
+
+## Get Trending
+---
+### Method GET (https://warm-tundra-23736.herokuapp.com/discover/trending)
+### Request Header
+> none
+### Request Params
+> none
+### Request Body
+> none
+### Response (200)
+>**Campaign Table** <br>
+            "id": "<asset_id>",<br>
+            "title": "<asset_title>",<br>
+            "goal": "<asset_goal>",<br>
+            "raised": "<asset_raised>",<br>
+            "header_img": "<asset_header_img>",<br>
+            "story": "<asset_story>",<br>
+            "due_date": "<asset_due_date>",<br>
+            "UserId": "<asset_UserId>",<br>
+            "CategoryId": "<asset_CategoryId>",<br>
+            "bankAccount": "<asset_bankAccount>",<br>
+            "point": "<asset_point>",<br>
+            "createdAt": "<asset_createdAt>",<br>
+            "updatedAt": "<asset_updatedAt>",<br>
+            "User": <br>
+                "name": "<asset_name>",<br>
+                "photo": "<asset_photo>",<br>
+            "Category": {<br>
+                "name": "<asset_name>",<br>
+                "image": "<asset_image>"<br>
+            }<br>
+        }
+### Response (400 - Bad Request)
+>"msg": "<error_msg>"
+---
+<br>
+
+## Get All Campaign by UserId
+---
+### Method GET (https://warm-tundra-23736.herokuapp.com/campaign/user)
+### Request Header
+> "token": "<your_token>"
+### Request Params
+> none
+### Request Body
+> none
+### Response (200)
+>**Campaign Table** <br>
+            "id": "<asset_id>",<br>
+            "title": "<asset_title>",<br>
+            "goal": "<asset_goal>",<br>
+            "raised": "<asset_raised>",<br>
+            "header_img": "<asset_header_img>",<br>
+            "story": "<asset_story>",<br>
+            "due_date": "<asset_due_date>",<br>
+            "UserId": "<asset_UserId>",<br>
+            "CategoryId": "<asset_CategoryId>",<br>
+            "bankAccount": "<asset_bankAccount>",<br>
+            "point": "<asset_point>",<br>
+            "createdAt": "<asset_createdAt>",<br>
+            "updatedAt": "<asset_updatedAt>",<br>
+            "Category": {<br>
+                "name": "<asset_name>",<br>
+                "image": "<asset_image>"<br>
+            }<br>
+        }
+### Response (400 - Bad Request)
+>"msg": "<error_msg>"
+---
+<br>

@@ -60,14 +60,6 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     due_date: DataTypes.DATE,  
-    due_date: {
-      type: DataTypes.DATE,
-      validate: {
-        isDate: {
-          msg: "Please input a valid date!"
-        }
-      }
-    },
     UserId: DataTypes.INTEGER,
     CategoryId: {
       type: DataTypes.INTEGER,

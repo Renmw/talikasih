@@ -35,7 +35,8 @@ router.use('/campaign', campaignRoutes);
 //discover campaign
 const campaignController = require('../controllers/Campaign');
 router.get('/discover/all/:page', campaignController.getAllCampaign);
-router.get('/discover/category/:page', campaignController.getByCategory);
-router.get('/discover/search/:page', campaignController.getBySearch);
+router.get('/discover/category/:CategoryId/:page', campaignController.getByCategory);
+router.get('/discover/search/:search/:page', campaignController.getBySearch);
+router.get('/discover/trending', campaignController.getTrending);
 
 exports.router = router;
