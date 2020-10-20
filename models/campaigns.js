@@ -15,6 +15,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Campaigns.belongsTo(models.Category);
+      Campaigns.belongsTo(models.Users);
+
       Campaigns.belongsToMany(models.Users, {through: 'models.UserDonations'})
       Campaigns.belongsToMany(models.Users, {through: 'models.UserComments'})
     }
@@ -58,14 +60,6 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     due_date: DataTypes.DATE,  
-    due_date: {
-      type: DataTypes.DATE,
-      validate: {
-        isDate: {
-          msg: "Please input a valid date!"
-        }
-      }
-    },
     UserId: DataTypes.INTEGER,
     CategoryId: {
       type: DataTypes.INTEGER,
