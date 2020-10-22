@@ -85,7 +85,7 @@ class CommentController {
             next(err);        
         }
     }
-    static async findByCampaign(req,res,next){
+    static async findByCampaign(req,res,next) {
         const CampaignId = req.params.CampaignId;
         const page = req.params.page      
         try{
@@ -101,13 +101,14 @@ class CommentController {
             } else {
                 const options = {
                     page, 
-                    paginate: 2,
+                    paginate: 6,
                     where : {
                         CampaignId
                     },
-                    include : [
-                        Campaigns,Users
-                    ]
+                    include : {
+                        model : Users,
+                        attributes: ['name','photo']
+                    }
                 }
             const { docs, pages, total } = await UserComments.paginate(options)
             if (page > pages){
@@ -120,6 +121,34 @@ class CommentController {
                     comments: docs,
                 })
             }
+            }
+        } catch(err){
+            next(err);
+        }
+    }
+    static async allComment(req,res,next){
+        const CampaignId = req.params.CampaignId;
+        try{
+            const comment = await UserComments.findAll({
+                where : {
+                    CampaignId
+                }
+            })
+            if (!comment){
+                res.send(404).json({
+                    msg: "There is no comment found in this campaign"
+                })
+            } else {
+                const comments = await UserComments.findAll({
+                    where : {
+                        CampaignId
+                    },
+                    include : {
+                        model : Users,
+                         attributes: ['name','photo']
+                    }
+                }) 
+                res.status(200).json({comments}) 
             }
         } catch(err){
             next(err);

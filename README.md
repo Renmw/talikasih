@@ -920,7 +920,7 @@ if (Campaigns.raised < (CampaignLog.TotalAmmount + ammount)){
 
 ## PUT /campaignLog/:id
 ```
-Request Header:
+-Request Header:
 {token}
 -Request Body:{
     "UserId":"",
@@ -963,7 +963,26 @@ not needed
         "content":"",
         "date":""
     },
-    include :[Campaigns,Users]
+    Users: "name" : ""
+           "photo" : ""
+}
+```
+
+## GET /comment/:CampaignId
+```
+- Request Header:
+not needed 
+-Request Body:
+not needed
+-Respone(200){
+    comments: {
+        "UserId":"",
+        "CampaignId":"",
+        "content":"",
+        "date":""
+    },
+    Users: "name" : ""
+           "photo" : ""
 }
 ```
 ## POST /comment/add/:id
